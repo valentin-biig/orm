@@ -29,9 +29,33 @@ ORM test library
  
  ` bin/console da:sc:up --force `
  
- #### Fixtures
+ #### Fixtures (optional)
  
  ` bin/console do:fi:lo `
+ 
+ ```yml
+ AppBundle\Entity\User:
+     Toto:
+         name: 'Toto'
+ 
+     Yolo:
+         name : 'Yolo'
+ ```
+ 
+ ```
+ AppBundle\Entity\Post:
+     Post1:
+         label: 'Blabla'
+         user: '@Toto'
+ 
+     Post2:
+         label: 'Bloublou'
+         user: '@Toto'
+ 
+     Post3:
+         label: 'Bloblo'
+         user: '@Yolo'
+ ```
  
  ## Commands to test ORM behaviour
  
@@ -45,7 +69,7 @@ ORM test library
  
  ## Configuration
  
- ```
+ ```php
  class User
  {
      ...
@@ -60,7 +84,7 @@ ORM test library
      ...
   ```
   
-  ```
+  ```php
   class Post
   {
       ...
