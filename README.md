@@ -42,7 +42,7 @@ ORM test library
          name : 'Yolo'
  ```
  
- ```
+ ```yml
  AppBundle\Entity\Post:
      Post1:
          label: 'Blabla'
