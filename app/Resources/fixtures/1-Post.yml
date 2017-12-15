@@ -1,0 +1,12 @@
+AppBundle\Entity\Post:
+    Post1:
+        label: 'Blabla'
+        user: '@Toto'
+
+    Post2:
+        label: 'Bloublou'
+        user: '@Toto'
+
+    Post3:
+        label: 'Bloblo'
+        user: '@Yolo'

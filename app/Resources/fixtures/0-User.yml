@@ -1,0 +1,6 @@
+AppBundle\Entity\User:
+    Toto:
+        name: 'Toto'
+
+    Yolo:
+        name : 'Yolo'
