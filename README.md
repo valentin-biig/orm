@@ -9,17 +9,17 @@ ORM test library
  
  ` docker-compose start `
  
- ## Container
+ #### Container
  
  `docker-compose exec php bash `
  
- ## Database
+ #### Database
  
  ` bin/console do:da:cr `
  
  ` bin/console da:sc:up --force `
  
- ## Fixtures
+ #### Fixtures
  
  ` bin/console do:fi:lo `
  
@@ -32,3 +32,35 @@ ORM test library
  ## Access to PhpMyAdmin
  
  ` localhost:8081 `
+ 
+ ## Configuration
+ 
+ ```
+ class User
+ {
+     ...
+     
+     /**
+      * @var Collection
+      *
+      * @ORM\OneToMany(targetEntity="AppBundle\Entity\Post", mappedBy="user", cascade={"persist", "remove"})
+      */
+     private $posts;
+     
+     ...
+  ```
+  
+  ```
+  class Post
+  {
+      ...
+      
+      /**
+       * @var User
+       *
+       * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", inversedBy="posts")
+       */
+      private $user;
+      
+      ...
+ ``` 
