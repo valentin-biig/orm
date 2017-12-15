@@ -5,10 +5,13 @@ ORM test library
  
  * Docker (nginx, php-fpm, mysql, phpmyadmin)
  * Entities (User, Post) with OneToMany association
+ * Symfony 3.4
  * Fixtures (doctrine fixtures, alice)
  * Commands (to test the cascade remove)
 
  ## Install
+ 
+ Create a ` .env ` file with the configuration in ` .env.dist `
  
  ` docker-compose build `
  
